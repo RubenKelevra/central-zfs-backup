@@ -52,9 +52,7 @@ rsync -qaAXve "ssh -p$STORAGE_NODE_SSHPORT" --exclude={"/dev/*","/proc/*","/sys/
 
 if test $? -ne 0; then
 	echo "backup-job failed, informing control-vm..."
-	#FIXME
-	echo "cleaning up..."
-	#FIXME
+	ssh $CONTROL_NODE_SSHUSER@$CONTROL_NODE_HOSTNAME:$CONTROL_NODE_SSHPORT $SSH_OPTIONS "echo \"failed\" > $CONTROL_NODE_NOTIFYFOLDER/$HOSTNAME-finished-backup" #FIXME
 	logger "root-backup failed, rsync returned an error..."
 	exit 1
 else
