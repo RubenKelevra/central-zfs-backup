@@ -24,7 +24,7 @@ STORAGE_NODE_TRIES=0
 while [ $STORAGE_NODE_TRIES -le 4 ]; do
 	STORAGE_NODE_TRIES=$( expr $STORAGE_NODE_TRIES + 1 )
 	echo "try to reach storage-node...."
-	ssh $STORAGE_NODE_SSHUSER@$STORAGE_NODE_HOSTNAME:$STORAGE_NODE_SSHPORT $SSH_OPTIONS "quit"
+	ssh $STORAGE_NODE_SSHUSER@$STORAGE_NODE_HOSTNAME:$STORAGE_NODE_SSHPORT $SSH_OPTIONS "exit"
 	if test $? -ne 0; then
 		echo "failed, retrying in $( expr $STORAGE_NODE_BOOTTIME / 10 )"
 		sleep $( expr $STORAGE_NODE_BOOTTIME / 10 )
