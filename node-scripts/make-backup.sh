@@ -10,7 +10,7 @@ if test $? -ne 0; then
 fi
 
 echo "we need the cold-storage-node. Informing control-vm...."
-ssh $CONTROL_NODE_SSHUSER@$CONTROL_NODE_HOSTNAME:$CONTROL_NODE_SSHPORT $SSH_OPTIONS "touch $CONTROL_NODE_NOTIFYFOLDER/start-cold-storage-node"
+ssh $CONTROL_NODE_SSHUSER@$CONTROL_NODE_HOSTNAME:$CONTROL_NODE_SSHPORT $SSH_OPTIONS "bash /usr/local/bin/start-cold-storage-node.sh"
 if test $? -ne 0; then
 	echo "failed."
 	logger "can't inform control-node, that want to start the cold-storage..."
