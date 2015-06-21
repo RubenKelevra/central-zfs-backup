@@ -35,7 +35,7 @@ while [ $STORAGE_NODE_TRIES -le 4 ]; do
 done
 
 if [ $STORAGE_NODE_TRIES -eq 5 ]; then
-	echo "storage node was not reachable..."
+	echo "storage-node was not reachable..."
 	exit 1
 fi
 
