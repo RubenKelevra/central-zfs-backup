@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source ../options.sh
+
 echo "checking preconditions..."
 `rsync --version >/dev/null`
 if test $? -ne 0; then
