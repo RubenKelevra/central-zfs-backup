@@ -1,7 +1,8 @@
 #!/bin/bash
 
 echo "checking preconditions..."
-if ! [ `rsync --version` ]; then
+`rsync --version >/dev/null`
+if test $? -ne 0; then
 	echo "no rsync found."
 	exit 1
 fi
