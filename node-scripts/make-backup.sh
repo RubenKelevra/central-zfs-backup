@@ -1,8 +1,13 @@
 #!/bin/bash
 
 echo "checking preconditions..."
+if ! [ `rsync --version` ]; then
+	echo "no rsync found."
+	exit 1
+fi
 
-echo "running a full systembackup on the cold-storage-node. Informing control-vm...."
+echo "want to run a full systembackup on the cold-storage-node. Informing control-vm...."
+
 
 echo "backup-job done. Informing control-vm..."
 
