@@ -1,5 +1,7 @@
 CONTROL_NODE_HOSTNAME="chons.vfn-nrw.de"
 CONTROL_NODE_SSHPORT="2337"
+CONTROL_NODE_SSHUSER="backupjob"
+CONTROL_NODE_NOTIFYFOLDER="/tmp/backupcontroller/" # don't forget the tailing /
 STORAGE_NODE_HOSTNAME="anubis.vfn-nrw.de"
 STORAGE_NODE_SSHPORT="1337"
 STORAGE_NODE_BOOTTIME="60"
