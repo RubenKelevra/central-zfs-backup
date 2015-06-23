@@ -48,7 +48,7 @@ if test $? -ne 0; then
 fi
 
 echo "start rsyncing..."
-rsync -qaAXve "ssh -p$STORAGE_NODE_SSHPORT" --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found","/home/*/.cache/*","/home/*/tmp/*","/var/cache/pacman/pkg/*","/var/cache/nginx/*","/var/log/journal/*"} /* $STORAGE_NODE_SSHUSER@$STORAGE_NODE_HOSTNAME:$STORAGE_NODE_PATH/$HOSTNAME-root-backup
+rsync -qaAXve "ssh -p$STORAGE_NODE_SSHPORT" --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found","/home/*/.cache/*","/home/*/tmp/*","/var/cache/pacman/pkg/*","/var/cache/nginx/*","/var/log/journal/*","/var/lib/libvirt/images/*.iso"} /* $STORAGE_NODE_SSHUSER@$STORAGE_NODE_HOSTNAME:$STORAGE_NODE_PATH/$HOSTNAME-root-backup
 
 if test $? -ne 0; then
 	echo "backup-job failed, informing control-vm..."
