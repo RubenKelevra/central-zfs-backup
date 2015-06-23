@@ -7,7 +7,7 @@ STORAGE_NODE_SSHPORT="1337"
 STORAGE_NODE_SSHUSER="backupjob"
 STORAGE_NODE_BOOTTIME="80"
 
-STORAGE_NODE_PATH="/data/backupstorage" 
+STORAGE_NODE_PATH="/data/backupstore" 
 
 #SSH_OPTIONS="-o Ciphers='chacha20-poly1305@openssh.com,aes256-cbc' -o Compression=yes -o CompressionLevel=8 -o IPQoS=0x02 -o 	KexAlgorithms='curve25519-sha256@libssh.org,ecdh-sha2-nistp521,ecdh-sha2-nistp384,diffie-hellman-group-exchange-sha256' -o MACs='hmac-sha2-512-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512,hmac-sha2-256' -o TCPKeepAlive=no -o ServerAliveInterval=3 -o ServerAliveCountMax=5 -o ConnectTimeout=4 -o ControlMaster='auto' -o ControlPersist=yes -o	ControlPath='~/.ssh/socket-%r@%h:%p'"
 SSH_OPTIONS="-o Compression=yes -o CompressionLevel=8 -o IPQoS=0x02 -o TCPKeepAlive=no -o ServerAliveInterval=3 -o ServerAliveCountMax=5 -o ConnectTimeout=4 "
